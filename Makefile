@@ -80,6 +80,17 @@ test_environment:
 # PROJECT RULES                                                                 #
 #################################################################################
 
+original:
+	python3 src/generate.py \
+	    --load_8bit \
+	    --base_model 'decapoda-research/llama-7b-hf' \
+	    --lora_weights 'tloen/alpaca-lora-7b'
+
+japanese:
+	python3 src/generate.py \
+	    --load_8bit \
+	    --base_model 'decapoda-research/llama-7b-hf' \
+	    --lora_weights 'models/japanese-lora-alpaca'
 
 
 #################################################################################
